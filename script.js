@@ -39,8 +39,9 @@ $(document).ready(() => {
       })
 
       // when the aarow on the card is clicked the card will take up the whole screen to view.
-      .on("click", ".card_button", (e) => {
-          $(e.target).addClass(".card_expand");
+      .on("click", ".card_expand", function(e) {
+          $(this).addClass(defaultClass).removeClass("card_expand");
+          
           
         // when the button is clicked the clicked element adds the reserved class and removes the available class
           // then   
