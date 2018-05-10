@@ -13,14 +13,16 @@ $(document).ready(() => {
         
         if($(this).hasClass("card_bills")){
          defaultClass= "card_bills"; 
-         bgc = "orange";
+         bgc = "#EA5200";
         } else if ($(this).hasClass("card_food")){
           defaultClass = "card_food";
-          bgc = "pink";
+          bgc = "#EA175D";
         } else if ($(this).hasClass("card_clothes")){
             defaultClass = "card_clothes";
+            bgc = "#071738"
         } else if ($(this).hasClass("card_entertain")){
           defaultClass = "card_entertain";
+          bgc = "#EA5200";
         }    
 
         $(this).addClass("card_expand").removeClass(defaultClass);
