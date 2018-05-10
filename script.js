@@ -59,7 +59,26 @@ $(document).ready(() => {
       $("#budgetInfo").empty();
        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your weekly budget is: ${wbi}</p>`);
        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remain balance is: ${wbi}</p>`)
-      });
+      })
 
+      .on("click", ".expenseAdd", function(){
+        // grab variable values
+        let name = $(".expense_Name").val();
+        let amount = $(".expense_Amount").val();
+        console.log(name);
+        console.log(amount);
+        // append values to expense log
+        $(".expenseLog_entertain").prepend(`<div class="logWrapper"><p>${name}</p><p>${amount}</p></div>`);
+        // deduct the amount from the total
+  
+        // update DOM to show how much they have spent
+  
+        // clear variable values
+  
+        // $(expenseLog_entertain).prepend
+        // expense_Name
+        // expense_Amount
+
+      });
       
 });
