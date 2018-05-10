@@ -61,7 +61,5 @@ $(document).ready(() => {
        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remain balance is: ${wbi}</p>`)
       });
 
-
-
-
+      
 });
