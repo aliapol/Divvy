@@ -102,6 +102,7 @@ h1 {
   top: 0;
   z-index: 1;
   position: absolute;
+  order: 2;
 }
 
 .card_food {
@@ -109,6 +110,7 @@ h1 {
   top: 5rem;
   z-index: 2;
   position: absolute;
+  order: 3;
 }
 
 .card_clothes {
@@ -116,6 +118,7 @@ h1 {
   top: 10rem;
   z-index: 3;
   position: absolute;
+  order: 4;
 }
 
 .card_entertain {
@@ -123,6 +126,7 @@ h1 {
   top: 15rem;
   position: absolute;
   z-index: 4;
+  order: 5;
 }
 
 
@@ -151,6 +155,7 @@ h1 {
   background-color: #EA175D;
   box-shadow: 0px -4px 13px -4px;rgba(7,23,56,0.47);
   transition: .3s all;
+  order: 1;
 }
 
 .summary_square:hover {
@@ -165,11 +170,11 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 2rem;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   header {
-    height: 35rem;
+    height: 30rem;
     border-radius: 1.5rem;
   }
 
@@ -215,11 +220,12 @@ h1 {
   
   .card_summary {
     width: auto;
-    height: 20rem;
+    height: auto;
     position: relative;
     top: auto;
     background-color: white;
     z-index: 20;
+    margin: 0 auto;
   }
 
   .summary_square {
