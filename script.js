@@ -6,21 +6,25 @@ $(document).ready(() => {
     let expense_name ;
     let expense_amount;
     let defaultClass ="";
+    let bgc = "";
   
       $("main").on("click", ".card", function(e) {
         //  when the cards get default this stuff happens
         
         if($(this).hasClass("card_bills")){
          defaultClass= "card_bills"; 
+         bgc = "orange";
         } else if ($(this).hasClass("card_food")){
           defaultClass = "card_food";
+          bgc = "pink";
         } else if ($(this).hasClass("card_clothes")){
             defaultClass = "card_clothes";
-        } else if ($(this).hasClass("card_spending")){
-          defaultClass = "card_clothes";
+        } else if ($(this).hasClass("card_entertain")){
+          defaultClass = "card_entertain";
         }    
-        console.log(defaultClass);
-        $(this).addClass(".card_expand").removeClass(defaultClass);
+
+        $(this).addClass("card_expand").removeClass(defaultClass);
+        $(this).css("background-color", `${bgc}`)
         // expense_amount = $("#expense_amount").val();
         // expense_name = $("#expense_name").val();
         

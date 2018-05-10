@@ -52,11 +52,12 @@ h1 {
   text-shadow: -4px 3px 5px black;
 }
 
+
 .card_summary {
   top: 20rem;
   position: absolute;
   background-color: white;
-  z-index: 100;
+  z-index: 20;
 }
 
 .card {
@@ -73,7 +74,7 @@ h1 {
   transition: .45s all;
 }
 
-.card-header {
+.card_header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -127,9 +128,10 @@ h1 {
 
 
 .card_expand {
-  z-index: 40;
+  z-index: 999;
   top: 0;
   height: 100rem;
+  background-color: green;
 }
 
 .summary_sq_container {
