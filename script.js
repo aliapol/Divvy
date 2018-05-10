@@ -11,8 +11,10 @@ $(document).ready(() => {
   
       $("main").on("click", ".card_header", function(e) {
         //  when the cards get default this stuff happens
-        
-        if($(this).hasClass("card_bills")){
+        //grab the parent element of the header clicked, which will be the card we are selecting
+        let clickedDude = $(this).parent()[0];
+        console.log(clickedDude);
+        if($(clickedDude).hasClass("card_bills")){
          defaultClass= "card_bills"; 
          bgc = "#EA5200";
         } else if ($(this).hasClass("card_food")){
@@ -26,8 +28,8 @@ $(document).ready(() => {
           bgc = "#EA5200";
         }    
 
-        $(this).addClass("card_expand").removeClass(defaultClass);
-        $(this).css("background-color", `${bgc}`)
+        $(clickedDude).addClass("card_expand").removeClass(defaultClass);
+        $(clickedDude).css("background-color", `${bgc}`)
          expense_amount = $("#expense_amount").val();
          expense_name = $("#expense_name").val();
         
