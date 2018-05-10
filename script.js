@@ -8,12 +8,13 @@ $(document).ready(() => {
     let defaultClass ="";
     let bgc = "";
     let wbi = "";
-  
+    let clickedDude ="";
+
+    //expand card function
       $("main").on("click", ".card_header", function(e) {
         //  when the cards get default this stuff happens
         //grab the parent element of the header clicked, which will be the card we are selecting
-        let clickedDude = $(this).parent()[0];
-        console.log(clickedDude);
+        clickedDude = $(this).parent()[0];
         if($(clickedDude).hasClass("card_bills")){
          defaultClass= "card_bills"; 
          bgc = "#EA5200";
@@ -33,36 +34,29 @@ $(document).ready(() => {
 
         $(clickedDude).addClass("card_expand").removeClass(defaultClass);
         $(clickedDude).css("background-color", `${bgc}`)
+        //adding a class to header so that we can target it for clicking to collapse without the event firing when you click anywhere on the card
+        $(this).addClass("card_header_expanded");
+      
+        //TODO: prob move this into the expense logging function
          expense_amount = $("#expense_amount").val();
          expense_name = $("#expense_name").val();
         
-          
-          // when the button is clicked the clicked element adds the reserved class and removes the available class
-          // then 
-          // button.click(() => {
-          //     $(e.target).removeClass(".card_expand");
-          // });
       })
 
-      // when the aarow on the card is clicked the card will take up the whole screen to view.
-      .on("click", ".card_expand", function(e) {
-          $(this).addClass(defaultClass).removeClass("card_expand");
-          
-          
-        // when the button is clicked the clicked element adds the reserved class and removes the available class
-          // then   
-          // button.click(() => {
-          //   $(e.target).removeClass(".card_expand");
-        // });
+    //collapse card function
+      .on("click", ".card_header_expanded", function(e) {
+          //remove the card_expand class, which will collapse card
+        $(clickedDude).addClass(defaultClass).removeClass("card_expand");
+        //remove the header class -which had no styles but was used to target the click
+        $(this).removeClass("card_header_expanded");
+            
       })
-      // when the card on the summary page is clicked another div will appear that has an input for entering total budget
-      .on("click", "#total_view", (e) => {
-        $("#total_input").show(); 
-        
-      })
+
+
      //this closes the "total budget" input 
       .on("click", "#weeklyBudgetSubmit", (e) => {
         wbi = $("#weeklyBudgetInput").val();
+      $("#budgetInfo").empty();
        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your weekly budget is: ${wbi}</p>`);
        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remain balance is: ${wbi}</p>`)
       });
