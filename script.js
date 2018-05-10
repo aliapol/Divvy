@@ -7,8 +7,9 @@ $(document).ready(() => {
     let expense_amount;
     let defaultClass ="";
     let bgc = "";
+    let wbi = "";
   
-      $("main").on("click", ".card", function(e) {
+      $("main").on("click", ".card_header", function(e) {
         //  when the cards get default this stuff happens
         
         if($(this).hasClass("card_bills")){
@@ -27,8 +28,8 @@ $(document).ready(() => {
 
         $(this).addClass("card_expand").removeClass(defaultClass);
         $(this).css("background-color", `${bgc}`)
-        // expense_amount = $("#expense_amount").val();
-        // expense_name = $("#expense_name").val();
+         expense_amount = $("#expense_amount").val();
+         expense_name = $("#expense_name").val();
         
           
           // when the button is clicked the clicked element adds the reserved class and removes the available class
@@ -45,9 +46,9 @@ $(document).ready(() => {
           
         // when the button is clicked the clicked element adds the reserved class and removes the available class
           // then   
-          button.click(() => {
-            $(e.target).removeClass(".card_expand");
-        });
+          // button.click(() => {
+          //   $(e.target).removeClass(".card_expand");
+        // });
       })
       // when the card on the summary page is clicked another div will appear that has an input for entering total budget
       .on("click", "#total_view", (e) => {
@@ -55,9 +56,12 @@ $(document).ready(() => {
         
       })
      //this closes the "total budget" input 
-      .on("click", "#total_submit", (e) => {
-        $("#total_input").hide();
-        
-      })
+      .on("click", "#weeklyBudgetSubmit", (e) => {
+        wbi = $("#weeklyBudgetInput").val();
+       $(".weeklyBudgetDisplay").append(`<p>Your total budget is: ${wbi}</p>`);
+      });
+
+
+
 
 });
