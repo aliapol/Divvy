@@ -62,32 +62,33 @@ $(document).ready(() => {
         wbi = $("#weeklyBudgetInput").val();
       $("#budgetInfo").empty();
        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your weekly budget is: ${wbi}</p>`);
-       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remain balance is: ${wbi}</p>`)
+       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remain balance is: ${wbi}</p>`);
       })
+
+    
 
       .on("click", ".expenseAddEntertain", function(){
         // grab variable values from entertain account
-        let name = $(".expense_Name").val();
-        let amount = Number($(".expense_Amount").val());
-        console.log(name);
-        console.log(amount);
+        let name = $(".expense_Name_entertain").val();
+        let amount = Number($(".expense_Amount_entertain").val());
         // append values to expense log
         $(".expenseLog_entertain").prepend(`<div class="logWrapper"><p>${name}</p><p>${amount}</p></div>`);
         
         // clear variable values
-        $(".expense_Name").val("");
-        $(".expense_Amount").val("");
+        $(".expense_Name_entertain").val("");
+        $(".expense_Amount_entertain").val("");
         
         
         // deduct the amount from the total
         wbi -= amount;
         spentEntertain += amount;
-        console.log(spentEntertain);
+        
 
   
         // update DOM to show how much they have spent
         $("#totalSpent_entertain").text(spentEntertain);
-        
+        $(".weeklyBudgetDisplay").text(`You have spent: $(`)
+        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
 
       })
 
@@ -108,14 +109,62 @@ $(document).ready(() => {
         // deduct the amount from the total
         wbi -= amount;
         spentBills += amount;
-        console.log(spentBills);
+        
 
   
         // update DOM to show how much they have spent
         $("#totalSpent_bills").text(spentBills);
-        
+        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
 
+      })
+
+      .on("click", ".expenseAddFood", function(){
+        // grab variable values from bills account
+        let name = $(".expense_Name_food").val();
+        let amount = Number($(".expense_Amount_food").val());
+        
+        // append values to expense log
+        $(".expenseLog_food").prepend(`<div class="logWrapper"><p>${name}</p><p>${amount}</p></div>`);
+        
+        // clear variable values
+        $(".expense_Name_food").val("");
+        $(".expense_Amount_food").val("");
+        
+        
+        // deduct the amount from the total
+        wbi -= amount;
+        spentFood += amount;
+
+  
+        // update DOM to show how much they have spent
+        $("#totalSpent_food").text(spentFood);
+        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
+      })
+
+      .on("click", ".expenseAddClothes", function(){
+        // grab variable values from bills account
+        let name = $(".expense_Name_clothes").val();
+        let amount = Number($(".expense_Amount_clothes").val());
+        
+        // append values to expense log
+        $(".expenseLog_clothes").prepend(`<div class="logWrapper"><p>${name}</p><p>${amount}</p></div>`);
+        
+        // clear variable values
+        $(".expense_Name_clothes").val("");
+        $(".expense_Amount_clothes").val("");
+        
+        
+        // deduct the amount from the total
+        wbi -= amount;
+        spentClothes += amount;
+      
+
+  
+        // update DOM to show how much they have spent
+        $("#totalSpent_clothes").text(spentClothes);
+        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
       });
+
 
       
       
