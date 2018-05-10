@@ -63,7 +63,8 @@ $(document).ready(() => {
      //this closes the "total budget" input 
       .on("click", "#weeklyBudgetSubmit", (e) => {
         wbi = $("#weeklyBudgetInput").val();
-       $(".weeklyBudgetDisplay").append(`<p>Your total budget is: ${wbi}</p>`);
+       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your weekly budget is: ${wbi}</p>`);
+       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remain balance is: ${wbi}</p>`)
       });
 
 
