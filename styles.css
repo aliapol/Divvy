@@ -52,12 +52,27 @@ h1 {
   text-shadow: -4px 3px 5px black;
 }
 
+input {
+  padding: .4rem;
+  border-radius: .4rem;
+  height: 2.8rem;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.397);
+  border: none;
+  margin: .5rem;
+}
 
-.card_summary {
-  top: 20rem;
-  position: absolute;
-  background-color: white;
-  z-index: 20;
+button {
+  padding: .4rem;
+  border-radius: .4rem;
+  height: 2.8rem;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.397);
+  border: none;
+}
+
+.expenseLog {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  
 }
 
 .card {
@@ -72,8 +87,23 @@ h1 {
   height: 35rem;
   box-shadow:0px -4px 13px -4px rgba(7,23,56,0.47);
   transition: .45s all;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 1.5rem;
 }
 
+.totalSpent {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+}
+
+.card_summary {
+  top: 20rem;
+  position: absolute;
+  background-color: white;
+  z-index: 20;
+  display: none;
+}
 .card_header {
   display: flex;
   flex-direction: row;
@@ -90,7 +120,7 @@ h1 {
   letter-spacing: .2rem;
 }
 
-.card:last-child h3 {
+.card_summary h3 {
   color: #EA175D;
 }
 
@@ -183,10 +213,19 @@ h1 {
   font-size: 1.3rem;
 }
 
+
+
 #weeklyBudgetInput {
-  border-radius: .4rem;
+  /* border-radius: .4rem; */
 }
 
+.expenseLog_entertain {
+  height: 30rem;
+  width: 30rem;
+  color: white;
+  background-color: #EA175D;
+  padding: 1rem;
+}
 
 @media only screen and (min-width: 768px){
 
@@ -212,6 +251,7 @@ h1 {
     height: 20rem;
     position: relative;
     margin: 1rem;
+    
   }
 
   .card_bills {
