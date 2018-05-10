@@ -8,11 +8,12 @@ $(document).ready(() => {
     let defaultClass ="";
     let bgc = "";
     let wbi = "";
+    let clickedDude = "";
   
       $("main").on("click", ".card_header", function(e) {
         //  when the cards get default this stuff happens
         //grab the parent element of the header clicked, which will be the card we are selecting
-        let clickedDude = $(this).parent()[0];
+        clickedDude = $(this).parent()[0];
         console.log(clickedDude);
         if($(clickedDude).hasClass("card_bills")){
          defaultClass= "card_bills"; 
@@ -45,8 +46,9 @@ $(document).ready(() => {
       })
 
       // when the aarow on the card is clicked the card will take up the whole screen to view.
-      .on("click", ".card_expand", function(e) {
-          $(this).addClass(defaultClass).removeClass("card_expand");
+      .on("click", ".card_header", function(e) {
+        clickedDude = $(this).parent()[0];
+        $(clickedDude).addClass(defaultClass).removeClass("card_expand");
           
           
         // when the button is clicked the clicked element adds the reserved class and removes the available class
@@ -71,4 +73,5 @@ $(document).ready(() => {
 
 
 
+      
 });
