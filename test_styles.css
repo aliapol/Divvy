@@ -94,27 +94,27 @@ cursor: pointer;
   height: 2.4rem;
 }
 
-#card_bills {
+.card_bills {
   background-color: #EA5200;
   top: 0;
   z-index: 1;
   position: absolute;
 }
-#card_food {
+.card_food {
   background-color: #EA175D;
   top: 5rem;
   z-index: 2;
   position: absolute;
 }
 
-#card_clothes {
+.card_clothes {
   background-color: #071738;
   top: 10rem;
   z-index: 3;
   position: absolute;
 }
 
-#card_entertain {
+.card_entertain {
   background-color: #EA5200;
   top: 15rem;
   position: absolute;
