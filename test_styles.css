@@ -1,0 +1,230 @@
+font-family: 'Paytone One', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+
+  max-width: 100rem;
+  font-family: "open sans";
+  color: white;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(7, 23, 56, 0.8),rgba(7, 23, 56, 0.8)), url("images/travel.jpeg");
+  background-size: cover; 
+  box-shadow: 0px 10px 20px -5px rgba(0,0,0,.8); 
+  font-family: "pantone one";
+  height: 20rem;
+  width: 100%;
+  color: white;
+}
+
+main{
+  top: -1rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 6rem;
+  padding: 1rem;
+  margin: 0;
+  text-shadow: -4px 3px 5px black;
+}
+
+
+
+.card {
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: 'Paytone One', sans-serif;
+  height: 40rem;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 35rem;
+  box-shadow: 0px -4px 13px -4px rgba(7,23,56,0.47);
+  transition: .45s all;
+
+}
+
+.card_header{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 100%;
+cursor: pointer;
+}
+
+.card h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.8rem;
+  letter-spacing: .2rem;
+}
+
+
+.card:last-child  h3{
+  color:#EA175D
+}
+
+.card img{
+  height: 2.4rem;
+}
+
+#card_bills {
+  background-color: #EA5200;
+  top: 0;
+  z-index: 1;
+  position: absolute;
+}
+#card_food {
+  background-color: #EA175D;
+  top: 5rem;
+  z-index: 2;
+  position: absolute;
+}
+
+#card_clothes {
+  background-color: #071738;
+  top: 10rem;
+  z-index: 3;
+  position: absolute;
+}
+
+#card_entertain {
+  background-color: #EA5200;
+  top: 15rem;
+  position: absolute;
+  z-index: 4;
+}
+
+#card_summary {
+  top: 20rem;
+  position: absolute;
+  background-color: white;
+  z-index: 20;
+}
+
+.summary_sq_container{
+  margin-top: .5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.summary_square {
+  border-radius: 1.5rem;
+  margin: 1rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: #EA175D;
+  box-shadow: 0px -4px 13px -4px rgba(7,23,56,0.47);
+  transition: .3s all;
+}
+
+.summary_square:hover{
+  transform: translateY(3px);
+}
+
+
+@media only screen and (min-width: 768px){
+
+  main{
+  
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  header {
+    height: 35rem;
+    border-radius: 1.5rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  .card {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    margin: 1rem;
+  }
+
+  #card_bills {
+    background-color: #EA5200;
+    z-index: 1;
+    position: relative;
+    top: auto;
+  }
+  #card_food {
+    background-color: #EA175D;
+    z-index: 2;
+    position: relative;
+    top: auto;
+  }
+  
+  #card_clothes {
+    background-color: #071738;
+    z-index: 3;
+    position: relative;
+    top: auto;
+  }
+  
+  
+  #card_entertain {
+    background-color: #EA5200;
+    position: relative;
+    top: auto;
+    z-index: 4;
+  }
+  
+  
+  #card_summary {
+    width: auto;
+    height: 20rem;
+    position: relative;
+    top: auto;
+    background-color: white;
+    z-index: 20;
+  }
+
+  .summary_square {
+    border-radius: 1.5rem;
+    margin: 1rem;
+    width: 13rem;
+    height: 13rem;
+    background-color: #EA175D;
+    box-shadow: 0px -4px 13px -4px rgba(7,23,56,0.47);
+    transition: .3s all;
+  }
+}
+
+
