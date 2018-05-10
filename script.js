@@ -17,16 +17,19 @@ $(document).ready(() => {
         if($(clickedDude).hasClass("card_bills")){
          defaultClass= "card_bills"; 
          bgc = "#EA5200";
-        } else if ($(this).hasClass("card_food")){
+        } else if ($(clickedDude).hasClass("card_food")){
           defaultClass = "card_food";
           bgc = "#EA175D";
-        } else if ($(this).hasClass("card_clothes")){
+        } else if ($(clickedDude).hasClass("card_clothes")){
             defaultClass = "card_clothes";
             bgc = "#071738"
-        } else if ($(this).hasClass("card_entertain")){
+        } else if ($(clickedDude).hasClass("card_entertain")){
           defaultClass = "card_entertain";
           bgc = "#EA5200";
-        }    
+        } else if ($(clickedDude).hasClass("card_summary")){
+          defaultClass = "card_summary"
+          bgc = "white";
+        }
 
         $(clickedDude).addClass("card_expand").removeClass(defaultClass);
         $(clickedDude).css("background-color", `${bgc}`)
