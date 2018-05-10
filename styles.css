@@ -144,14 +144,14 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .summary_square {
   border-radius: 1.5rem;
   margin: 1rem;
-  width: 8rem;
-  height: 8rem;
+  width: 12rem;
+  height: 12rem;
   background-color: #EA175D;
   box-shadow: 0px -4px 13px -4px;rgba(7,23,56,0.47);
   transition: .3s all;
@@ -162,6 +162,9 @@ h1 {
   transform: translateY(3px);
 }
 
+#budgetInfo {
+  width: 28rem;
+}
 
 @media only screen and (min-width: 768px){
 
@@ -219,13 +222,17 @@ h1 {
   
   
   .card_summary {
-    width: auto;
+    width:100%;
     height: auto;
     position: relative;
     top: auto;
     background-color: white;
     z-index: 20;
     margin: 0 auto;
+  }
+
+  .card_summary .card_header {
+    justify-content: center;
   }
 
   .summary_square {
