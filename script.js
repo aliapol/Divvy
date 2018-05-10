@@ -9,6 +9,10 @@ $(document).ready(() => {
     let bgc = "";
     let wbi = "";
     let clickedDude ="";
+    let spentBills = "";
+    let spentFood = "";
+    let spentClothes = "";
+    let spentEntertain = 0;
 
     //expand card function
       $("main").on("click", ".card_header", function(e) {
@@ -62,22 +66,29 @@ $(document).ready(() => {
       })
 
       .on("click", ".expenseAdd", function(){
-        // grab variable values
+        // grab variable values from entertain account
         let name = $(".expense_Name").val();
-        let amount = $(".expense_Amount").val();
-        console.log(name);
-        console.log(amount);
+        let amount = Number($(".expense_Amount").val());
+        
         // append values to expense log
         $(".expenseLog_entertain").prepend(`<div class="logWrapper"><p>${name}</p><p>${amount}</p></div>`);
+        
+        // clear variable values
+        $(".expense_Name").val("");
+        $(".expense_Amount").val("");
+        
+        
         // deduct the amount from the total
+        wbi -= amount;
+        spentEntertain += amount;
+        console.log(spentEntertain);
+
   
         // update DOM to show how much they have spent
+        $("#totalSpent_entertain").text(spentEntertain);
+        
   
-        // clear variable values
-  
-        // $(expenseLog_entertain).prepend
-        // expense_Name
-        // expense_Amount
+        
 
       });
       
