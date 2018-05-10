@@ -25,49 +25,84 @@
 
   <main>
 
+    <!-- bills card -->
     <section class="card card_bills animated slideInLeft">
         <div class="card_header"> 
           <h3 class="card_header_title">Bills</h3>
-          <img src="images/add.png" class="card_button" alt="button for card">
+          <img src="images/add.png" alt="button for card">
         </div>
+        
     </section>
 
+    <!-- food card -->
     <section class="card card_food animated slideInRight">
         <div class="card_header"> 
           <h3 class="card_header_title">Food</h3>
-          <img class="card_button"  src="images/add.png" alt="button for card">
+          <img src="images/add.png" alt="button for card">
         </div>
     </section>
 
+
+    <!-- clothes card -->
     <section class="card card_clothes animated slideInLeft">
       <div class="card_header"> 
           <h3 class="card_header_title">Clothes</h3>
-          <img class="card_button" src="images/add.png" alt="button for card">
+          <img src="images/add.png" alt="button for card">
         </div>
     </section>
 
+    <!-- entertain card -->
     <section class="card card_entertain animated slideInRight">
       <div class="card_header"> 
           <h3 class="card_header_title">Spending</h3>
-          <img class="card_button" src="images/add.png" alt="button for card">
+          <img src="images/add.png" alt="button for card">
         </div>
+
+        <!-- center this div with flexboxs -->
+        <div class="totalSpent">
+          <p>You've spent $<span id="totalSpent_entertain"></span></p>
+        </div>
+
+        <div class="updateExpenses">
+          <input type="text" class="expense_Name" id="expenseName_entertain" placeholder="Name of expense">
+          <input id="expense_Name" type="number" class="expense_Amount" placeholder="$87.99">
+          <button type="button" class="expenseAdd">ADD</button>
+        </div>
+
+        <div class="expenseLog_entertain">
+          <p>Expense Log</p>
+        </div>
+
     </section>
-    
+
+    <!-- summary card -->
     <section class="card_summary card animated slideInLeft">
+      <!-- card header -->
       <div class="card_header"> 
         <h3 class="card_header_title">summary</h3>
-        <img class="card_button" src="images/add.png" alt="button for card">
+        <img src="images/add.png" alt="button for card">
       </div>
-      <section class="summary_sq_container">
-        <div class="summary_square"></div>
-        <div class="summary_square"></div>
-        <div class="summary_square"></div>
-        <div class="summary_square"></div>
-        <div class="summary_square"></div>
-        <div class="summary_square"></div>
-      </section>
 
-      add_name add_expense add_submit
+      <!-- square container -->
+      <section class="summary_sq_container">
+        <!-- square -->
+        <div class="summary_square">
+          <p>Set your weekly budget:</p>
+          <input type="number" id="weeklyBudgetInput">
+        </div>
+         <!-- square -->
+        <div class="summary_square">
+          <p class="weeklyBudgetDisplay">$456</p>
+        </div>
+         <!-- square -->
+        <div class="summary_square"></div>
+         <!-- square -->
+        <div class="summary_square"></div>
+         <!-- square -->
+        <div class="summary_square"></div>
+         <!-- square -->
+        <div class="summary_square"></div>
+    </section>
 
 
 
