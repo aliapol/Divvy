@@ -184,20 +184,20 @@ h1 {
     margin: 1rem;
   }
 
-  #card_bills {
+  .card_bills {
     background-color: #EA5200;
     z-index: 1;
     position: relative;
     top: auto;
   }
-  #card_food {
+  .card_food {
     background-color: #EA175D;
     z-index: 2;
     position: relative;
     top: auto;
   }
   
-  #card_clothes {
+  .card_clothes {
     background-color: #071738;
     z-index: 3;
     position: relative;
@@ -205,7 +205,7 @@ h1 {
   }
   
   
-  #card_entertain {
+  .card_entertain {
     background-color: #EA5200;
     position: relative;
     top: auto;
@@ -213,7 +213,7 @@ h1 {
   }
   
   
-  #card_summary {
+  .card_summary {
     width: auto;
     height: 20rem;
     position: relative;
