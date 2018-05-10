@@ -52,6 +52,13 @@ h1 {
   text-shadow: -4px 3px 5px black;
 }
 
+.card_summary {
+  top: 20rem;
+  position: absolute;
+  background-color: white;
+  z-index: 25;
+}
+
 .card {
   border-radius: 1rem;
   padding: 1rem;
@@ -117,11 +124,12 @@ h1 {
   z-index: 4;
 }
 
-.card_summary {
-  top: 20rem;
-  position: absolute;
-  background-color: white;
-  z-index: 20px;
+
+
+.card_expand {
+  z-index: 40;
+  top: 0;
+  height: 100rem;
 }
 
 .summary_sq_container {
