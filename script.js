@@ -7,12 +7,13 @@ $(document).ready(() => {
   
       $(document).on("click", ".card", (e) => {
         //  when the cards get clicked this stuff happens
+        $(e.target).addClass(".card_expand");
           
           
           // when the button is clicked the clicked element adds the reserved class and removes the available class
           // then 
           button.click(() => {
-              
+              $(e.target).removeClass(".card_expand");
           });
       })
 
