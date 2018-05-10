@@ -4,9 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <!-- our styles -->
+  <link rel="stylesheet" href="styles.css">
+ 
+  <!--animate library-->
+  <link rel="stylesheet" href="animate.css">
+   <!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Paytone+One" rel="stylesheet">
+  <title>Divvy</title>
 </head>
+
 <body>
+
+  <header>
+    <h1 class="animated jello">Divvy.</h1>
+    <h2 id="subHeader">Blah blah subheader</h2>
+  </header>
+
+  <main>
+
+    <section class="card animated slideInLeft" id="card_bills">
+        <div class="card_header"> 
+          <h3 class="card_header_title">Bills</h3>
+          <img src="images/add.png" alt="button for card">
+        </div>
+    </section>
+
+    <section class="card animated slideInRight" id="card_food">
+        <div class="card_header"> 
+          <h3 class="card_header_title">Food</h3>
+          <img src="images/add.png" alt="button for card">
+        </div>
+    </section>
+
+    <section class="card animated slideInLeft" id="card_clothes">
+      <div class="card_header"> 
+          <h3 class="card_header_title">Clothes</h3>
+          <img src="images/add.png" alt="button for card">
+        </div>
+    </section>
+
+    <section class="card animated slideInRight" id="card_entertain">
+      <div class="card_header"> 
+          <h3 class="card_header_title">Spending</h3>
+          <img src="images/add.png" alt="button for card">
+        </div>
+    </section>
+    
+    <section class="card animated slideInLeft" id="card_summary">
+      <div class="card_header"> 
+        <h3 class="card_header_title">summary</h3>
+        <img src="images/add.png" alt="button for card">
+      </div>
+      <section class="summary_sq_container">
+        <div class="summary_square"></div>
+        <div class="summary_square"></div>
+        <div class="summary_square"></div>
+        <div class="summary_square"></div>
+        <div class="summary_square"></div>
+        <div class="summary_square"></div>
+      </section>
+
+
+
+
+      
+    </section>
+
+
+
+  </main>
+
+
   
+
+ <script src="script.js"></script> 
 </body>
 </html>
