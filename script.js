@@ -22,7 +22,7 @@ $(document).ready(() => {
       })
       // when the card on the summary page is clicked another div will appear that has an input for entering total budget
       .on("click", "#total_view", (e) => {
-          #total_input
+          
       });
       
 });
