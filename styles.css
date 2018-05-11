@@ -28,7 +28,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(7, 23, 56, 0.8),rgba(7, 23, 56, 0.8)), url("images/travel.jpg");
+  background: linear-gradient(rgba(7, 23, 56, 0.8),rgba(7, 23, 56, 0.8)), url("images/travel.jpeg");
   background-size: cover;
   box-shadow: 0px 10px 20px -5pxrgba(0,0,0,.8); 
   font-family: "pantone one";
@@ -78,7 +78,7 @@ button {
 
 .expenseLog_header {
   font-family: 'Open Sans', sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   border-radius: 1.5rem;
 }
 
@@ -270,15 +270,18 @@ button {
   box-shadow: 0px 0px 37px 4px rgba(0,0,0,.8);
   border-radius: 1.5rem;
   display: none;
+  align-items: center;
 }
 
 #yaBroke img {
 position: absolute;
-right: 1rem;
-top: 1rem;
+right: 2rem;
+top: 2rem;
+height: 3rem;
 }
 
 #yaBroke p {
+  
   align-self: center;
   font-size: 2rem;
   text-align: center;
@@ -290,7 +293,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rgba(234, 82, 0, 0.8),rgba(234, 23, 93, 0.8));
+  background: linear-gradient(rgba(234, 23, 93, 0.8), rgba(234, 82, 0, 0.8));
   z-index: 10;
   position: absolute;
   bottom: bottom;
@@ -328,4 +331,10 @@ footer p {
   letter-spacing: .2rem;
   margin: .2rem;
   font-weight: 400;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#divvyTeam a:hover {
+  transform: scale(1.2);
+  font-weight: bold;
 }

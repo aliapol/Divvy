@@ -146,6 +146,7 @@ background-position: center;
   }
 
   footer {
+    border-radius: 1.5rem;
     display: flex;
     height: 15rem;
   }
