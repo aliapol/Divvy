@@ -7,12 +7,13 @@ $(document).ready(() => {
     let expense_amount;
     let defaultClass ="";
     let bgc = "";
-    let wbi = "";
+    let wbi;
     let clickedDude ="";
     let spentBills = 0;
     let spentFood = 0;
     let spentClothes = 0;
     let spentEntertain = 0;
+    let totalSpent = 0;
 
     //expand card function
       $("main").on("click", ".card_header", function(e) {
@@ -61,8 +62,8 @@ $(document).ready(() => {
       .on("click", "#weeklyBudgetSubmit", (e) => {
         wbi = $("#weeklyBudgetInput").val();
       $("#budgetInfo").empty();
-       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your weekly budget is: ${wbi}</p>`);
-       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remain balance is: ${wbi}</p>`);
+       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
+       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remain balance is: $${wbi}</p>`);
       })
 
     
@@ -81,16 +82,22 @@ $(document).ready(() => {
         
         // deduct the amount from the total
         wbi -= amount;
+        // total amount spent in category
         spentEntertain += amount;
+        // total amount spent overall
+        totalSpent += amount;
         
+        if (wbi <= 0){
+          alert("Ya broke");
+        };
 
   
         // update DOM to show how much they have spent
         $("#totalSpent_entertain").text(spentEntertain);
-        //TODO: why do we have line 91 created but no text? then on the next line we erase 91 with the second line of text? Ease fix but we need to do it.
-        $(".weeklyBudgetDisplay").text(`You have spent: $(`)
-        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
-
+        //Empty out budget info container and prepend the total spent and remaining balance info
+        $("#budgetInfo").empty();
+        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
+        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${wbi}</p>`);
       })
 
 
@@ -109,13 +116,22 @@ $(document).ready(() => {
         
         // deduct the amount from the total
         wbi -= amount;
+        //total amount spent in category
         spentBills += amount;
+        // total amount spent overall
+        totalSpent += amount;
         
-
+        if (wbi <= 0){
+          alert("Ya broke");
+        };
   
         // update DOM to show how much they have spent
         $("#totalSpent_bills").text(spentBills);
         $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
+        //Empty out budget info container and prepend the total spent and remaining balance info
+        $("#budgetInfo").empty();
+        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
+        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${wbi}</p>`);
 
       })
 
@@ -134,12 +150,22 @@ $(document).ready(() => {
         
         // deduct the amount from the total
         wbi -= amount;
+        //total amount spent in category
         spentFood += amount;
-
+        // total amount spent overall
+        totalSpent += amount;
+        
+        if (wbi <= 0){
+          alert("Ya broke");
+        };
   
         // update DOM to show how much they have spent
         $("#totalSpent_food").text(spentFood);
         $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
+        //Empty out budget info container and prepend the total spent and remaining balance info
+        $("#budgetInfo").empty();
+        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
+        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${wbi}</p>`);
       })
 
       .on("click", ".expenseAddClothes", function(){
@@ -157,13 +183,23 @@ $(document).ready(() => {
         
         // deduct the amount from the total
         wbi -= amount;
+        //total amount spent in category
         spentClothes += amount;
+        // total amount spent overall
+        totalSpent += amount;
       
+        if (wbi <= 0){
+          alert("Ya broke");
+        };
 
   
         // update DOM to show how much they have spent
         $("#totalSpent_clothes").text(spentClothes);
         $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
+        //Empty out budget info container and prepend the total spent and remaining balance info
+        $("#budgetInfo").empty();
+        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
+        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${wbi}</p>`);
       });
 
 
