@@ -72,7 +72,7 @@ $(document).ready(() => {
         let name = $(".expense_Name_entertain").val();
         let amount = Number($(".expense_Amount_entertain").val());
         // append values to expense log
-        $(".expenseLog_entertain").prepend(`<div class="logWrapper"><p>${name}</p><p>${amount}</p></div>`);
+        $(".expenseLog_entertain").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>${amount}</p></div>`);
         
         // clear variable values
         $(".expense_Name_entertain").val("");
