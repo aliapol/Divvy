@@ -7,7 +7,7 @@ $(document).ready(() => {
     let expense_amount;
     let defaultClass ="";
     let bgc = "";
-    let wbi;
+    let wbi = 0;
     let clickedDude ="";
     let spentBills = 0;
     let spentFood = 0;
