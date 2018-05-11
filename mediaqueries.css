@@ -123,7 +123,7 @@ background-position: center;
   }
 
   .card_clothes .expenseLog{
-    background: linear-gradient(rgba(7, 23, 56, 0.7),rgba(234, 23, 93, 0.76)), url(images/clothes.jpeg);
+    background: linear-gradient(rgba(7, 23, 56, 0.7),rgba(234, 23, 93, 0.76)), url(images/clothes.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -141,7 +141,7 @@ background-position: center;
 
   #yaBroke{
     top: 60%;
-    width: 45rem;
-    height: 45rem;
+    height: 30rem;
+    max-width: 70rem;
   }
 }
