@@ -70,8 +70,8 @@ $(document).ready(() => {
       .on("click", "#weeklyBudgetSubmit", (e) => {
         wbi = $("#weeklyBudgetInput").val();
       $("#budgetInfo").empty();
-       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInLeft">Your total spent this week is: $${totalSpent}</p>`);
-       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInRight">Your remain balance is: $${wbi}</p>`);
+       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInLeft">Your total spent this week is: $${parseFloat(totalSpent).toFixed(2)}</p>`);
+       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInRight">Your remaining balance is: $${parseFloat(wbi).toFixed(2)}</p>`);
       })
 
     
@@ -81,7 +81,7 @@ $(document).ready(() => {
         let name = $(".expense_Name_entertain").val();
         let amount = Number($(".expense_Amount_entertain").val());
         // append values to expense log
-        $(".expenseLog_entertain").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>${amount}</p></div>`);
+        $(".expenseLog_entertain").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>$${parseFloat(amount).toFixed(2)}</p></div>`);
         
         // clear variable values
         $(".expense_Name_entertain").val("");
@@ -103,9 +103,16 @@ $(document).ready(() => {
         // update DOM to show how much they have spent
         $("#totalSpent_entertain").text(spentEntertain);
         //Empty out budget info container and prepend the total spent and remaining balance info
+        
+        if (wbi <0) {
+          $("#budgetInfo").empty();
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInLeft">Your total spent this week is: $${parseFloat(totalSpent).toFixed(2)}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInRight">You're over your budget by: $${parseFloat(Math.abs(wbi)).toFixed(2)}</p>`);
+        } else if (wbi >= 0) {
         $("#budgetInfo").empty();
-        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
-        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${wbi}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${parseFloat(totalSpent).toFixed(2)}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${parseFloat(wbi).toFixed(2)}</p>`);
+        }
       })
 
 
@@ -115,7 +122,7 @@ $(document).ready(() => {
         let amount = Number($(".expense_Amount_bills").val());
         
         // append values to expense log
-        $(".expenseLog_bills").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>${amount}</p></div>`);
+        $(".expenseLog_bills").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>$${parseFloat(amount).toFixed(2)}</p></div>`);
         
         // clear variable values
         $(".expense_Name_bills").val("");
@@ -135,11 +142,17 @@ $(document).ready(() => {
   
         // update DOM to show how much they have spent
         $("#totalSpent_bills").text(spentBills);
-        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
+        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${parseFloat(wbi).toFixed(2)}`);
         //Empty out budget info container and prepend the total spent and remaining balance info
+        if (wbi <0) {
+          $("#budgetInfo").empty();
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInLeft">Your total spent this week is: $${parseFloat(totalSpent).toFixed(2)}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInRight">You're over your budget by: $${parseFloat(Math.abs(wbi)).toFixed(2)}</p>`);
+        } else if (wbi >= 0) {
         $("#budgetInfo").empty();
-        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
-        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${wbi}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${parseFloat(totalSpent).toFixed(2)}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${parseFloat(wbi).toFixed(2)}</p>`);
+        }
 
       })
 
@@ -149,7 +162,7 @@ $(document).ready(() => {
         let amount = Number($(".expense_Amount_food").val());
         
         // append values to expense log
-        $(".expenseLog_food").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>${amount}</p></div>`);
+        $(".expenseLog_food").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>$${parseFloat(amount).toFixed(2)}</p></div>`);
         
         // clear variable values
         $(".expense_Name_food").val("");
@@ -169,11 +182,17 @@ $(document).ready(() => {
   
         // update DOM to show how much they have spent
         $("#totalSpent_food").text(spentFood);
-        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
+        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${parseFloat(wbi).toFixed(2)}`);
         //Empty out budget info container and prepend the total spent and remaining balance info
+        if (wbi <0) {
+          $("#budgetInfo").empty();
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInLeft">Your total spent this week is: $${parseFloat(totalSpent).toFixed(2)}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInRight">You're over your budget by: $${parseFloat(Math.abs(wbi)).toFixed(2)}</p>`);
+        } else if (wbi >= 0) {
         $("#budgetInfo").empty();
-        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
-        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${wbi}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${parseFloat(totalSpent).toFixed(2)}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${parseFloat(wbi).toFixed(2)}</p>`);
+        }
       })
 
       .on("click", ".expenseAddClothes", function(){
@@ -182,7 +201,7 @@ $(document).ready(() => {
         let amount = Number($(".expense_Amount_clothes").val());
         
         // append values to expense log
-        $(".expenseLog_clothes").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>${amount}</p></div>`);
+        $(".expenseLog_clothes").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>$${parseFloat(amount).toFixed(2)}</p></div>`);
         
         // clear variable values
         $(".expense_Name_clothes").val("");
@@ -203,11 +222,17 @@ $(document).ready(() => {
   
         // update DOM to show how much they have spent
         $("#totalSpent_clothes").text(spentClothes);
-        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
+        $(".weeklyBudgetDisplay").text(`Your remaining budget: ${parseFloat(wbi).toFixed(2)}`);
         //Empty out budget info container and prepend the total spent and remaining balance info
+        if (wbi <0) {
+          $("#budgetInfo").empty();
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInLeft">Your total spent this week is: $${parseFloat(totalSpent).toFixed(2)}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInRight">You're over your budget by: $${parseFloat(Math.abs(wbi)).toFixed(2)}</p>`);
+        } else if (wbi >= 0) {
         $("#budgetInfo").empty();
-        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
-        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${wbi}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${parseFloat(totalSpent).toFixed(2)}</p>`);
+          $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${parseFloat(wbi).toFixed(2)}</p>`);
+        }
       })
 
       .on("click", "#yaBroke_close", function() {
