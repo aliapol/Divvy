@@ -62,6 +62,9 @@
     background-color: #EA175D;
     z-index: 20;
     margin: 1rem 0 3rem 0;
+    background: linear-gradient(rgba(234, 82, 0, 0.61),rgba(234, 23, 93, 0.76)), url(images/computer.jpg);
+    background-size: cover;
+background-position: center;
   }
 
 
@@ -88,9 +91,6 @@
     align-items: center;
   }
 
-  /* .weeklyBudgetSubmit {
-    margin:0;
-  } */
 
   .updateExpenses button {
     margin-top: .5rem;
@@ -111,24 +111,31 @@
   }
 
   .card_bills .expenseLog{
-background-color: rgba(234, 82, 0, 0.479);
+background: linear-gradient(rgba(234, 82, 0, 0.74),rgba(234, 23, 93, 0.76)), url(images/bills.jpg);
+background-size: cover;
+background-position: center;
   }
 
   .card_food .expenseLog{
-    background-color: #0717387c;
+    background: linear-gradient(rgba(234, 23, 93, 0.76), rgba(7, 23, 56, 0.562)), url(images/food.jpg);
+    background-size: cover;
+background-position: center;
   }
 
   .card_clothes .expenseLog{
-    background-color: rgba(234, 82, 0, 0.562);
+    background: linear-gradient(rgba(7, 23, 56, 0.7),rgba(234, 23, 93, 0.76)), url(images/clothes.jpeg);
+    background-size: cover;
+    background-position: center;
   }
 
   .card_entertain .expenseLog{
-    background-color: #071738;
+    background: linear-gradient(rgba(234, 82, 0, 0.9),rgba(234, 23, 93, 0.76)), url(images/drinks.jpeg);
+    background-size: cover;
+    background-position: center;
   }
 
-  #card_summary_h3 {
-    color: white;
+  .totalSpent {
+    font-size: 1.5rem;
+    text-align: center;
   }
-
-
 }

@@ -183,7 +183,7 @@ button {
 .card_expand {
   transform: 3s all;
   z-index: 999;
-  top: 0;
+  top: 5;
   height: 65rem;
 }
 
