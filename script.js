@@ -2,22 +2,24 @@
 
 $(document).ready(() => {
   // put all of the variables here
-    let total_budget ;  
-    let expense_name ;
-    let expense_amount;
-    let defaultClass ="";
-    let bgc = "";
-    let wbi = 0;
-    let clickedDude ="";
-    let spentBills = 0;
-    let spentFood = 0;
-    let spentClothes = 0;
-    let spentEntertain = 0;
-    let totalSpent = 0;
-    let windowWidth; 
+  let total_budget ;  
+  let expense_name ;
+  let expense_amount;
+  let defaultClass ="";
+  let bgc = "";
+  let wbi = 0;
+  let clickedDude ="";
+  let spentBills = 0;
+  let spentFood = 0;
+  let spentClothes = 0;
+  let spentEntertain = 0;
+  let totalSpent = 0;
+  let windowWidth = $(window).width(); 
+  $("#totalSpent_entertain").text(spentEntertain);
+  $("#totalSpent_clothes").text(spentClothes);
+  $("#totalSpent_food").text(spentFood);
+  $("#totalSpent_bills").text(spentBills);
   
-  
-
     //expand card function
       $("main").on("click", ".card_header", function(e) {
         //  when the cards get default this stuff happens
@@ -213,7 +215,7 @@ $(document).ready(() => {
         $(window).resize(function() {
           windowWidth = $(window).width();
           console.log(windowWidth);
-        })
+        });
       
       
 });
