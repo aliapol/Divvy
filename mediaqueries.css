@@ -138,4 +138,10 @@ background-position: center;
     font-size: 1.5rem;
     text-align: center;
   }
+
+  #yaBroke{
+    top: 60%;
+    width: 45rem;
+    height: 45rem;
+  }
 }
