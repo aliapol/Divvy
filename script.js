@@ -87,6 +87,7 @@ $(document).ready(() => {
   
         // update DOM to show how much they have spent
         $("#totalSpent_entertain").text(spentEntertain);
+        //TODO: why do we have line 91 created but no text? then on the next line we erase 91 with the second line of text? Ease fix but we need to do it.
         $(".weeklyBudgetDisplay").text(`You have spent: $(`)
         $(".weeklyBudgetDisplay").text(`Your remaining budget: ${wbi}`);
 
@@ -99,7 +100,7 @@ $(document).ready(() => {
         let amount = Number($(".expense_Amount_bills").val());
         
         // append values to expense log
-        $(".expenseLog_bills").prepend(`<div class="logWrapper"><p>${name}</p><p>${amount}</p></div>`);
+        $(".expenseLog_bills").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>${amount}</p></div>`);
         
         // clear variable values
         $(".expense_Name_bills").val("");
@@ -124,7 +125,7 @@ $(document).ready(() => {
         let amount = Number($(".expense_Amount_food").val());
         
         // append values to expense log
-        $(".expenseLog_food").prepend(`<div class="logWrapper"><p>${name}</p><p>${amount}</p></div>`);
+        $(".expenseLog_food").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>${amount}</p></div>`);
         
         // clear variable values
         $(".expense_Name_food").val("");
@@ -147,7 +148,7 @@ $(document).ready(() => {
         let amount = Number($(".expense_Amount_clothes").val());
         
         // append values to expense log
-        $(".expenseLog_clothes").prepend(`<div class="logWrapper"><p>${name}</p><p>${amount}</p></div>`);
+        $(".expenseLog_clothes").prepend(`<div class="logWrapper animated bounceInDown"><p>${name}</p><p>${amount}</p></div>`);
         
         // clear variable values
         $(".expense_Name_clothes").val("");
