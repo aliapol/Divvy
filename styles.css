@@ -88,13 +88,12 @@ button {
 
 .card {
   border-radius: 1rem;
-  padding: 1rem;
   font-family: 'Paytone one', sans serif;
   box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 30rem;
+  height: auto;
   box-shadow:0px -4px 13px -4px rgba(7,23,56,0.47);
   transition: .45s all;
   align-items: center;
@@ -113,7 +112,6 @@ button {
   position: absolute;
   background-color: white;
   z-index: 20;
-  /* display: none; */
 }
 
 .card_header {
@@ -122,8 +120,8 @@ button {
   justify-content: space-between;
   width: 100%;
   cursor: pointer;
-  margin-bottom: 1rem;
-  height: 100%;
+  /* margin-bottom: 1rem; */
+  height: 5rem;
 }
 
 .card h3 {
@@ -131,9 +129,11 @@ button {
   font-weight: bold;
   font-size: 1.8rem;
   letter-spacing: .2rem;
+  height: 5rem;
+  padding: 1rem;
 }
 
-.card_summary h3 {
+#card_summary_h3 {
   color: #EA175D;
 }
 
@@ -179,7 +179,7 @@ button {
   transform: 3s all;
   z-index: 999;
   top: 0;
-  height: 100rem;
+  height: 65rem;
 }
 
 .summary_sq_container {
@@ -243,7 +243,7 @@ button {
 .logWrapper{
   display: flex;
   justify-content: space-around;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (min-width: 768px){
@@ -310,11 +310,12 @@ button {
     background-color: white;
     z-index: 20;
     margin: 0 auto;
-    display:flex;
-    justify-content: center;
-    height: 100%;
   }
 
+
+  .card_summary .card_header {
+    justify-content: center;
+  }
 
   .summary_square {
     border-radius: 1.5rem;
