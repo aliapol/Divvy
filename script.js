@@ -14,11 +14,16 @@ $(document).ready(() => {
     let spentClothes = 0;
     let spentEntertain = 0;
     let totalSpent = 0;
+    let windowWidth; 
+  
+  
 
     //expand card function
       $("main").on("click", ".card_header", function(e) {
         //  when the cards get default this stuff happens
         //grab the parent element of the header clicked, which will be the card we are selecting
+        // wrapping click function to only work when window is in phone view
+        if(windowWidth < 768) {
         clickedDude = $(this).parent()[0];
         if($(clickedDude).hasClass("card_bills")){
          defaultClass= "card_bills"; 
@@ -36,16 +41,18 @@ $(document).ready(() => {
           defaultClass = "card_summary"
           bgc = "white";
         }
+      
+
 
         $(clickedDude).addClass("card_expand").removeClass(defaultClass);
         $(clickedDude).css("background-color", `${bgc}`)
         //adding a class to header so that we can target it for clicking to collapse without the event firing when you click anywhere on the card
         $(this).addClass("card_header_expanded");
       
-        //TODO: prob move this into the expense logging function
+        // initally set the values for the expense name and amount
          expense_amount = $("#expense_amount").val();
          expense_name = $("#expense_name").val();
-        
+      } 
       })
 
     //collapse card function
@@ -201,8 +208,12 @@ $(document).ready(() => {
         $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
         $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${wbi}</p>`);
       });
-
-
+        
+        // finding an setting the window width size
+        $(window).resize(function() {
+          windowWidth = $(window).width();
+          console.log(windowWidth);
+        })
       
       
 });
