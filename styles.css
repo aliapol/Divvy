@@ -84,6 +84,11 @@ button {
 .expenseLog {
   border-radius: 1.5rem;
   box-shadow: 0px 0px 13px -4px rgba(7,23,56,0.47);
+  height: 30rem;
+  width: 30rem;
+  color: white;
+  background-color: #EA175D;
+  padding: 1rem;
 }
 
 .card {
@@ -220,6 +225,8 @@ button {
     margin: 0;
 }
 
+
+
 .setBudget {
   margin: 0;
   font-family: "open sans";
@@ -232,13 +239,7 @@ button {
   /* border-radius: .4rem; */
 }
 
-.expenseLog {
-  height: 30rem;
-  width: 30rem;
-  color: white;
-  background-color: #EA175D;
-  padding: 1rem;
-}
+
 
 .logWrapper{
   display: flex;
@@ -246,85 +247,5 @@ button {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-@media only screen and (min-width: 768px){
 
-  main{
-  
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    justify-content: space-between;
-  }
-
-  header {
-    height: 30rem;
-    border-radius: 1.5rem;
-  }
-
-  h1 {
-    font-size: 8rem;
-  }
-
-  .card {
-    width: 20rem;
-    height: 20rem;
-    position: relative;
-    margin: 1rem;
-    
-  }
-
-  .card_bills {
-    background-color: #EA5200;
-    z-index: 1;
-    position: relative;
-    top: auto;
-  }
-  .card_food {
-    background-color: #EA175D;
-    z-index: 2;
-    position: relative;
-    top: auto;
-  }
-  
-  .card_clothes {
-    background-color: #071738;
-    z-index: 3;
-    position: relative;
-    top: auto;
-  }
-  
-  
-  .card_entertain {
-    background-color: #EA5200;
-    position: relative;
-    top: auto;
-    z-index: 4;
-  }
-  
-  
-  .card_summary {
-    width:100%;
-    height: auto;
-    position: relative;
-    top: auto;
-    background-color: white;
-    z-index: 20;
-    margin: 0 auto;
-  }
-
-
-  .card_summary .card_header {
-    justify-content: center;
-  }
-
-  .summary_square {
-    border-radius: 1.5rem;
-    margin: 1rem;
-    width: 13rem;
-    height: 13rem;
-    background-color: #EA175D;
-    box-shadow: 0px -4px 13px -4px rgba(7,23,56,0.47);
-    transition: .3s all;
-  }
-}
 
