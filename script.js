@@ -97,7 +97,7 @@ $(document).ready(() => {
         totalSpent += amount;
         
         if (wbi <= 0){
-          alert("Ya broke");
+          $(#yaBroke).show();
         };
 
   
@@ -131,7 +131,7 @@ $(document).ready(() => {
         totalSpent += amount;
         
         if (wbi <= 0){
-          alert("Ya broke");
+          $("#yaBroke").show();
         };
   
         // update DOM to show how much they have spent
@@ -165,7 +165,7 @@ $(document).ready(() => {
         totalSpent += amount;
         
         if (wbi <= 0){
-          alert("Ya broke");
+          $(#yaBroke).show();
         };
   
         // update DOM to show how much they have spent
@@ -198,7 +198,7 @@ $(document).ready(() => {
         totalSpent += amount;
       
         if (wbi <= 0){
-          alert("Ya broke");
+          $(#yaBroke).show();
         };
 
   
@@ -209,6 +209,10 @@ $(document).ready(() => {
         $("#budgetInfo").empty();
         $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
         $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remaining balance is: $${wbi}</p>`);
+      })
+
+      .on("click", "#yaBroke_close", function() {
+        $("#yaBroke").hide();
       });
         
         // finding an setting the window width size
