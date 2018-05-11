@@ -83,12 +83,11 @@ button {
   border-radius: 1rem;
   padding: 1rem;
   font-family: 'Paytone one', sans serif;
-  height: 40rem;
   box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 30rem;
   box-shadow:0px -4px 13px -4px rgba(7,23,56,0.47);
   transition: .45s all;
   align-items: center;
@@ -117,6 +116,7 @@ button {
   width: 100%;
   cursor: pointer;
   margin-bottom: 1rem;
+  /* height: 100%; */
 }
 
 .card h3 {
@@ -225,12 +225,17 @@ button {
   /* border-radius: .4rem; */
 }
 
-.expenseLog_entertain {
+.expenseLog {
   height: 30rem;
   width: 30rem;
   color: white;
   background-color: #EA175D;
   padding: 1rem;
+}
+
+.logWrapper{
+  display: flex;
+  justify-content: space-around;
 }
 
 @media only screen and (min-width: 768px){
