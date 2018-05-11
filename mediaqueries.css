@@ -129,13 +129,13 @@ background-position: center;
   }
 
   .card_entertain .expenseLog{
-    background: linear-gradient(rgba(234, 82, 0, 0.9),rgba(234, 23, 93, 0.76)), url(images/drinks.jpeg);
+    background: linear-gradient(rgba(234, 82, 0, 0.4),rgba(234, 23, 93, 0.76)), url(images/drinks.jpeg);
     background-size: cover;
     background-position: center;
   }
 
   .totalSpent {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 
@@ -143,5 +143,19 @@ background-position: center;
     top: 60%;
     height: 30rem;
     max-width: 70rem;
+  }
+
+  footer {
+    display: flex;
+    height: 15rem;
+  }
+
+  #divvyTeam {
+    flex-direction: row;
+    margin-top: 1rem;
+  }
+
+  #divvyTeam a {
+    margin: .5rem 3rem;
   }
 }

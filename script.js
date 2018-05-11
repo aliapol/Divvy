@@ -66,13 +66,12 @@ $(document).ready(() => {
             
       })
 
-
-     //this closes the "total budget" input 
+      //setting weekly budget
       .on("click", "#weeklyBudgetSubmit", (e) => {
         wbi = $("#weeklyBudgetInput").val();
       $("#budgetInfo").empty();
-       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your total spent this week is: $${totalSpent}</p>`);
-       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay">Your remain balance is: $${wbi}</p>`);
+       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInLeft">Your total spent this week is: $${totalSpent}</p>`);
+       $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInRight">Your remain balance is: $${wbi}</p>`);
       })
 
     
@@ -97,7 +96,7 @@ $(document).ready(() => {
         totalSpent += amount;
         
         if (wbi <= 0){
-          $(#yaBroke).show();
+          $("#yaBroke").css("display", "flex");
         };
 
   
@@ -165,7 +164,7 @@ $(document).ready(() => {
         totalSpent += amount;
         
         if (wbi <= 0){
-          $(#yaBroke).show();
+          $("#yaBroke").show();
         };
   
         // update DOM to show how much they have spent
@@ -198,7 +197,7 @@ $(document).ready(() => {
         totalSpent += amount;
       
         if (wbi <= 0){
-          $(#yaBroke).show();
+          $("#yaBroke").show();
         };
 
   

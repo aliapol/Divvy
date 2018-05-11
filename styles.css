@@ -20,6 +20,7 @@ body {
   max-width: 100rem;
   font-family:"open sans";
   color: white;
+  position: relative;
 }
 
 header {
@@ -81,10 +82,14 @@ button {
   border-radius: 1.5rem;
 }
 
+#expenseLog_foodOnly{
+  background-color: #EA5200;
+}
+
 .expenseLog {
   border-radius: 1.5rem;
   box-shadow: 0px 0px 13px -4px rgba(7,23,56,0.47);
-  height: 30rem;
+  height: 20rem;
   width: 30rem;
   color: white;
   background-color: #EA175D;
@@ -182,9 +187,9 @@ button {
 
 .card_expand {
   transform: 3s all;
-  z-index: 999;
+  z-index: 40;
   top: 5;
-  height: 65rem;
+  height: 50rem;
 }
 
 .summary_sq_container {
@@ -212,12 +217,15 @@ button {
 } */
 
 #budgetInfo {
+  padding: 1rem;
+  text-align: center;
   width: 28rem;
   height: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.397);
 }
 
 .weeklyBudgetDisplay {
@@ -248,7 +256,7 @@ button {
 }
 
 #yaBroke {
-  display: flex;
+  
   justify-content: center;
   padding: 1rem;
   z-index: 600;
@@ -261,6 +269,7 @@ button {
   transform: translateX(50%)translateY(-50%);
   box-shadow: 0px 0px 37px 4px rgba(0,0,0,.8);
   border-radius: 1.5rem;
+  display: none;
 }
 
 #yaBroke img {
@@ -275,5 +284,48 @@ top: 1rem;
   text-align: center;
 }
 
+footer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgba(234, 82, 0, 0.8),rgba(234, 23, 93, 0.8));
+  z-index: 10;
+  position: absolute;
+  bottom: bottom;
+  font-size: 1.3rem;
+  margin: 0;
+  display: none;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 300;
+}
+
+#footer_heading {
+  font-family: 'Paytone one', sans-serif;
+  font-size: 3.4rem;
+  padding: 0;
+  margin: 0;
+  text-shadow: -4px 3px 5px rgba(0, 0, 0, 0.418);
+}
 
 
+#divvyTeam {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#divvyTeam a{
+  text-decoration: none;
+  color: white;
+  /* font-family: 'Paytone One', sans-serif; */
+  font-size: 1.3rem;
+  letter-spacing: .2rem;
+  margin: .2rem;
+  font-weight: 400;
+}
