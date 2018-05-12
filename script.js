@@ -66,6 +66,8 @@ $(document).ready(() => {
             
       })
 
+    
+
       //setting weekly budget
       .on("click", "#weeklyBudgetSubmit", (e) => {
         wbi = $("#weeklyBudgetInput").val();
@@ -239,11 +241,26 @@ $(document).ready(() => {
         $("#yaBroke").hide();
       });
         
+
+     
         // finding an setting the window width size
         $(window).resize(function() {
           windowWidth = $(window).width();
           console.log(windowWidth);
         });
+
+        //force card to collapse if screen is resized past 768px
+        $(window).resize(function() {
+          windowWidth = $(window).width();
+          if(windowWidth >767){
+            $(clickedDude).addClass(defaultClass).removeClass("card_expand");
+            //remove the header class -which had no styles but was used to target the click
+            $(this).removeClass("card_header_expanded");
+          }
+        });
       
       
+     
+
+
 });

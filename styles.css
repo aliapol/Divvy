@@ -28,9 +28,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(7, 23, 56, 0.8),rgba(7, 23, 56, 0.8)), url("images/travel.jpeg");
+  background: linear-gradient(rgba(7, 23, 56, 0.7),rgba(7, 23, 56, 0.9)), url("images/travel.jpeg");
   background-size: cover;
-  box-shadow: 0px 10px 20px -5pxrgba(0,0,0,.8); 
+  background-position: bottom;
+  box-shadow: 0px 10px 10px -5px rgba(0,0,0,.4); 
   font-family: "pantone one";
   height: 20rem;
   width: 100%;
