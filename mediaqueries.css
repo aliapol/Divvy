@@ -56,7 +56,8 @@
   
   .card_summary {
     width:100%;
-    height: auto;
+    min-height: 1rem;
+    height: 30rem;
     position: relative;
     top: auto;
     background-color: #EA175D;
@@ -103,7 +104,8 @@ background-position: center;
   .expenseLog {
     border-radius: 0%;
     box-shadow: none;
-    height: 30rem;
+    min-height: 30rem;
+    height: auto;
     width: 21rem;
     color: white;
     background-color: #EA175D;
@@ -113,6 +115,7 @@ background-position: center;
   .card_bills .expenseLog{
 background: linear-gradient(rgba(234, 82, 0, 0.74),rgba(234, 23, 93, 0.76)), url(images/bills.jpg);
 background-size: cover;
+object-fit: cover;
 background-position: center;
   }
 

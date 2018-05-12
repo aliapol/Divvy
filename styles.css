@@ -89,7 +89,8 @@ button {
 .expenseLog {
   border-radius: 1.5rem;
   box-shadow: 0px 0px 13px -4px rgba(7,23,56,0.47);
-  height: 20rem;
+  min-height: 20rem;
+  height: auto;
   width: 30rem;
   color: white;
   background-color: #EA175D;
@@ -104,8 +105,9 @@ button {
   display: flex;
   flex-direction: column;
   height: auto;
+  min-height: 55rem;
   box-shadow:0px -4px 13px -4px rgba(7,23,56,0.47);
-  transition: .45s all;
+  transition: .15s all;
   align-items: center;
   font-family: 'Open Sans', sans-serif; 
   font-size: 1.5rem;
@@ -118,10 +120,16 @@ button {
 
 .card_summary {
   top: 20rem;
-  height: 50rem;
+  /* height: 60rem; */
   position: absolute;
   background-color: white;
   z-index: 20;
+}
+
+.card_summary_bg {
+  background: linear-gradient(rgba(234, 82, 0, 0.61),rgba(234, 23, 93, 0.76)), url(images/computer.jpg);
+  background-size: cover;
+background-position: center;
 }
 
 .card_header {
@@ -144,12 +152,10 @@ button {
 }
 
 #card_summary_h3 {
-  color: #EA175D;
+  /* color: #EA175D; */
 }
 
-.card img {
-  height: 2.4rem;
-}
+
 
 .card_bills {
   background-color: #EA5200;
@@ -189,7 +195,7 @@ button {
   transform: 3s all;
   z-index: 40;
   top: 5;
-  height: 50rem;
+  height: 65rem;
 }
 
 .summary_sq_container {
@@ -212,9 +218,6 @@ button {
   order: 1;
 }
 
-/* .summary_square:hover {
-  transform: translateY(3px);
-} */
 
 #budgetInfo {
   padding: 1rem;
@@ -251,8 +254,19 @@ button {
 
 .logWrapper{
   display: flex;
-  justify-content: space-around;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  justify-content: space-between;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #07173867;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logWrapper:hover {
+  transform: scale(1.1);
+}
+
+.logWrapper p{
+  margin-bottom: .3rem;
 }
 
 #yaBroke {
@@ -277,6 +291,7 @@ position: absolute;
 right: 2rem;
 top: 2rem;
 height: 3rem;
+cursor: pointer;
 }
 
 #yaBroke p {
@@ -337,3 +352,29 @@ footer p {
   transform: scale(1.2);
   font-weight: bold;
 }
+
+
+
+.expenseLog_bills {
+  background: linear-gradient(rgba(234, 82, 0, 0.9),rgba(234, 23, 93, 0.8)), url(images/bills.jpg);
+  background-size: cover;
+  background-position: center;
+    }
+  
+    .expenseLog_food{
+      background: linear-gradient(rgba(234, 23, 93, 0.9), rgba(7, 23, 56, 0.8)), url(images/food.jpg);
+      background-size: cover;
+  background-position: center;
+    }
+  
+    .expenseLog_clothes{
+      background: linear-gradient(rgba(7, 23, 56, 0.9),rgba(234, 23, 93, 0.8)), url(images/clothes.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+  
+  .expenseLog_entertain{
+      background: linear-gradient(rgba(234, 82, 0, 1),rgba(234, 23, 93, 0.7)), url(images/drinks.jpeg);
+      background-size: cover;
+      background-position: center;
+    }
