@@ -25,7 +25,7 @@ $(document).ready(() => {
         //  when the cards get default this stuff happens
         //grab the parent element of the header clicked, which will be the card we are selecting
         // wrapping click function to only work when window is in phone view
-        if(windowWidth < 768) {
+        if(windowWidth < 920) {
         clickedDude = $(this).parent()[0];
         if($(clickedDude).hasClass("card_bills")){
          defaultClass= "card_bills"; 
@@ -252,7 +252,7 @@ $(document).ready(() => {
         //force card to collapse if screen is resized past 768px
         $(window).resize(function() {
           windowWidth = $(window).width();
-          if(windowWidth >767){
+          if(windowWidth >920){
             $(clickedDude).addClass(defaultClass).removeClass("card_expand");
             //remove the header class -which had no styles but was used to target the click
             $(this).removeClass("card_header_expanded");
