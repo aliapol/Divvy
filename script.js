@@ -101,15 +101,9 @@ $(document).ready(() => {
         // total amount spent overall
         totalSpent += amount;
         
-        if (wbi <= 0){
-          $("#gameover")[0].play();
-          $("#yaBroke").css("display", "flex");
-          $("#yaBrokeFlash").css("display", "flex");
-         
-          ;
-          // $("#gameover").currentTime = 0;//reweind to the start
-         $("#gameover")[0].play();
-        };
+
+        checkOverBudget();
+    
 
   
         // update DOM to show how much they have spent
@@ -149,11 +143,7 @@ $(document).ready(() => {
         // total amount spent overall
         totalSpent += amount;
         
-        if (wbi <= 0){
-          $("#gameover")[0].play();
-          $("#yaBroke").show();
-          $("#yaBrokeFlash").css("display", "flex");
-        };
+        checkOverBudget();
   
         // update DOM to show how much they have spent
         $("#totalSpent_bills").text(spentBills);
@@ -192,11 +182,7 @@ $(document).ready(() => {
         // total amount spent overall
         totalSpent += amount;
         
-        if (wbi <= 0){
-          $("#gameover")[0].play();
-          $("#yaBroke").show();
-          $("#yaBrokeFlash").css("display", "flex");
-        };
+        checkOverBudget();
   
         // update DOM to show how much they have spent
         $("#totalSpent_food").text(spentFood);
@@ -234,12 +220,7 @@ $(document).ready(() => {
         // total amount spent overall
         totalSpent += amount;
       
-        if (wbi <= 0){
-          $("#gameover")[0].play();
-          $("#yaBroke").show();
-          $("#yaBrokeFlash").css("display", "flex");
-        };
-
+        checkOverBudget();
   
         // update DOM to show how much they have spent
         $("#totalSpent_clothes").text(spentClothes);
@@ -257,11 +238,11 @@ $(document).ready(() => {
       })
 
       .on("click", "#yaBroke_close", function() {
-        console.log("button is working");
-        
         $("#click")[0].play();
         $("#yaBroke").hide();
         $("#yaBrokeFlash").css("display", "none");
+        $("#gameover")[0].pause();
+        $("#gameover")[0].currentTime = 0;
       });
         
 
@@ -282,8 +263,12 @@ $(document).ready(() => {
           }
         });
       
-      
-     
-
+      function checkOverBudget(){
+        if (wbi <= 0){
+          $("#gameover")[0].play();
+          $("#yaBroke").show();
+          $("#yaBrokeFlash").css("display", "flex");
+        };
+      }
 
 });
