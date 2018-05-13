@@ -129,6 +129,7 @@ $(document).ready(() => {
 
 
       .on("click", ".expenseAddBills", function(){
+        $("#casino")[0].play();
         // grab variable values from bills account
         let name = $(".expense_Name_bills").val();
         let amount = Number($(".expense_Amount_bills").val());
@@ -170,6 +171,7 @@ $(document).ready(() => {
       })
 
       .on("click", ".expenseAddFood", function(){
+        $("#casino")[0].play();
         // grab variable values from bills account
         let name = $(".expense_Name_food").val();
         let amount = Number($(".expense_Amount_food").val());
@@ -210,6 +212,7 @@ $(document).ready(() => {
       })
 
       .on("click", ".expenseAddClothes", function(){
+        $("#casino")[0].play();
         // grab variable values from bills account
         let name = $(".expense_Name_clothes").val();
         let amount = Number($(".expense_Amount_clothes").val());
