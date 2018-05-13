@@ -149,6 +149,12 @@ background-position: center;
     max-width: 70rem;
   }
 
+  #yaBrokeFlash{
+    top: 60%;
+    height: 30rem;
+    max-width: 70rem;
+  }
+
   #yaBroke p {
     top: 50%;
     right: 50%;

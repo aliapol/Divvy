@@ -102,7 +102,7 @@ $(document).ready(() => {
         totalSpent += amount;
         
         if (wbi <= 0){
-
+          $("#gameover")[0].play();
           $("#yaBroke").css("display", "flex");
           $("#yaBrokeFlash").css("display", "flex");
          
@@ -150,6 +150,7 @@ $(document).ready(() => {
         totalSpent += amount;
         
         if (wbi <= 0){
+          $("#gameover")[0].play();
           $("#yaBroke").show();
           $("#yaBrokeFlash").css("display", "flex");
         };
@@ -192,6 +193,7 @@ $(document).ready(() => {
         totalSpent += amount;
         
         if (wbi <= 0){
+          $("#gameover")[0].play();
           $("#yaBroke").show();
           $("#yaBrokeFlash").css("display", "flex");
         };
@@ -233,6 +235,7 @@ $(document).ready(() => {
         totalSpent += amount;
       
         if (wbi <= 0){
+          $("#gameover")[0].play();
           $("#yaBroke").show();
           $("#yaBrokeFlash").css("display", "flex");
         };
