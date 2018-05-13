@@ -26,6 +26,7 @@ $(document).ready(() => {
         //grab the parent element of the header clicked, which will be the card we are selecting
         // wrapping click function to only work when window is in phone view
         if(windowWidth < 920) {
+          $("#click")[0].play();
         clickedDude = $(this).parent()[0];
         if($(clickedDude).hasClass("card_bills")){
          defaultClass= "card_bills"; 
@@ -59,6 +60,7 @@ $(document).ready(() => {
 
     //collapse card function
       .on("click", ".card_header_expanded", function(e) {
+        $("#click")[0].play();
           //remove the card_expand class, which will collapse card
         $(clickedDude).addClass(defaultClass).removeClass("card_expand");
         //remove the header class -which had no styles but was used to target the click
@@ -70,6 +72,7 @@ $(document).ready(() => {
 
       //setting weekly budget
       .on("click", "#weeklyBudgetSubmit", (e) => {
+        $("#swipe")[0].play();
         wbi = $("#weeklyBudgetInput").val();
       $("#budgetInfo").empty();
        $("#budgetInfo").prepend(`<p class="weeklyBudgetDisplay animated slideInLeft">Your total spent this week is: $${parseFloat(totalSpent).toFixed(2)}</p>`);
@@ -79,6 +82,7 @@ $(document).ready(() => {
     
 
       .on("click", ".expenseAddEntertain", function(){
+        $("#casino")[0].play();
         // grab variable values from entertain account
         let name = $(".expense_Name_entertain").val();
         let amount = Number($(".expense_Amount_entertain").val());
@@ -98,7 +102,13 @@ $(document).ready(() => {
         totalSpent += amount;
         
         if (wbi <= 0){
+
           $("#yaBroke").css("display", "flex");
+          $("#yaBrokeFlash").css("display", "flex");
+         
+          ;
+          // $("#gameover").currentTime = 0;//reweind to the start
+         $("#gameover")[0].play();
         };
 
   
@@ -140,6 +150,7 @@ $(document).ready(() => {
         
         if (wbi <= 0){
           $("#yaBroke").show();
+          $("#yaBrokeFlash").css("display", "flex");
         };
   
         // update DOM to show how much they have spent
@@ -180,6 +191,7 @@ $(document).ready(() => {
         
         if (wbi <= 0){
           $("#yaBroke").show();
+          $("#yaBrokeFlash").css("display", "flex");
         };
   
         // update DOM to show how much they have spent
@@ -219,6 +231,7 @@ $(document).ready(() => {
       
         if (wbi <= 0){
           $("#yaBroke").show();
+          $("#yaBrokeFlash").css("display", "flex");
         };
 
   
@@ -238,7 +251,11 @@ $(document).ready(() => {
       })
 
       .on("click", "#yaBroke_close", function() {
+        console.log("button is working");
+        
+        $("#click")[0].play();
         $("#yaBroke").hide();
+        $("#yaBrokeFlash").css("display", "none");
       });
         
 
