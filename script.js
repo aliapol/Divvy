@@ -19,7 +19,12 @@ $(document).ready(() => {
   $("#totalSpent_clothes").text(spentClothes);
   $("#totalSpent_food").text(spentFood);
   $("#totalSpent_bills").text(spentBills);
-  
+  //adusts volume of sound effects
+  $("#click")[0].volume = .3;
+  $("#swipe")[0].volume = .3;
+  $("#gameover")[0].volume = .3;
+  $("#casino")[0].volume = .3;
+
   //expand card function
   $("main").on("click", ".card_header", function() {
     //  when the cards get default this stuff happens
