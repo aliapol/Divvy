@@ -22,7 +22,6 @@ $(document).ready(() => {
   //adusts volume of sound effects
   $("#click")[0].volume = .3;
   $("#swipe")[0].volume = .3;
-  $("#gameover")[0].volume = .3;
   $("#casino")[0].volume = .3;
 
   //expand card function
@@ -204,9 +203,7 @@ $(document).ready(() => {
     //hide the over budget warning window and the flashing window behind it.
     $("#yaBroke").hide();
     $("#yaBrokeFlash").hide();
-    //stop the gameover sound effect and reset it's time to 0 so that the sound stops if the user closes the window
-    $("#gameover")[0].pause();
-    $("#gameover")[0].currentTime = 0;
+
   });
         
 
@@ -223,8 +220,7 @@ $(document).ready(() => {
   //function to check if user is over budget and if so, show the yaBroke window  
   function checkOverBudget(){
     if (wbi <= 0){
-      $("#gameover")[0].play();
-      $("#yaBroke").show();
+      $("#yaBroke").css("display", "flex");
       $("#yaBrokeFlash").css("display", "flex");
     };
   }
